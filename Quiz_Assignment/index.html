@@ -16,12 +16,12 @@
 
 
     <style>
-        #q1 {
+        #q1,
+        #result {
             display: none;
         }
-
-        #prevBtn {
-            display: none;
+        .res{
+            margin-bottom: 0em;
         }
     </style>
 </head>
@@ -29,10 +29,9 @@
 <body class="bg-dark">
     <div class="container">
         <div class="row">
-            <div class="col-md-12 mx-auto">
+            <div class="col-12 mx-auto">
                 <div class="card card-body text-center mt-5">
-                    <h1 class="heading display-5 pb-3">Quiz</h1>
-                    <button class="btn btn-dark startBtn" id="startBtn" onclick="renderQue(0)">Start</button>
+                    <h1 class="heading display-3 pb-3">Quiz</h1>
                     <form id="quiz-form">
                         <!-- Que1 -->
                         <div class="form-group" id="q1">
@@ -42,41 +41,47 @@
                             </div>
                             <div class="input-group mt-4">
                                 <div class="form-check mr-5">
-                                    <input class="form-check-input" type="radio" name="que1" id="que1" value="a">
+                                    <input class="form-check-input option" type="radio" name="que1" id="que1" value="a">
                                     <label class="form-check-label" for="que1" id="l1">
 
                                     </label>
                                 </div>
                                 <div class="form-check mr-5">
-                                    <input class="form-check-input" type="radio" name="que1" id="que1" value="b">
+                                    <input class="form-check-input option" type="radio" name="que1" id="que1" value="b">
                                     <label class="form-check-label" for="que1" id="l2">
 
                                     </label>
                                 </div>
 
                                 <div class="form-check mr-5">
-                                    <input class="form-check-input" type="radio" name="que1" id="que1" value="c">
+                                    <input class="form-check-input option" type="radio" name="que1" id="que1" value="c">
                                     <label class="form-check-label" for="que1" id="l3">
 
                                     </label>
                                 </div>
                                 <div class="form-check">
-                                    <input class="form-check-input" type="radio" name="que1" id="que1" value="d">
+                                    <input class="form-check-input option" type="radio" name="que1" id="que1" value="d">
                                     <label class="form-check-label" for="que1" id="l4">
 
                                     </label>
                                 </div>
                             </div>
                             <div class="card card-body mt-5">
-                                <div class="col-md-12 mx-auto">
-                                    <button class="btn btn-dark float-left" id="prevBtn"
-                                        onclick="renderQue(2)">Previous</button>
+                                <div class="col-12 mx-auto">
+                                    <a href="#" class="btn btn-dark float-left" id="prevBtn">Previous</a>
                                     <a href="#" class="btn btn-dark float-right" id="nextBtn">Next</a>
-                                    <!-- onclick="renderQue(1)" -->
+                                    <a href="#" class="btn btn-dark" id="finalSubmit">Submit</a>
                                 </div>
                             </div>
                         </div>
                     </form>
+                    <div class="card card-body text-center mt-5" id="result">
+                            <h1 class="heading display-6 res">Result</h1>
+                        <div class="card card-body text-center mt-2" id="resultItem">
+                            
+                        </div>
+                    </div>
+                    <button class="btn btn-dark startBtn" id="startBtn">Start</button>
                 </div>
             </div>
         </div>
